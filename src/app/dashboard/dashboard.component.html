@@ -1,0 +1,81 @@
+<div class="main-body">
+  <div class="customer-list">
+    <mat-nav-list>
+      <h3 mat-subheader>Customer List</h3>
+      <mat-list-item *ngFor="let customer of customers">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <!-- <h4 mat-line>{{ customer.name }}</h4> -->
+
+        <a routerLink="/detail/{{ customer.id }}" class="example-spacer"
+          ><h4 mat-line>
+            {{ customer.firstName + " " + customer.lastName }}
+          </h4></a
+        >
+
+        <button mat-icon-button (click)="deleteCustomer(customer.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </div>
+
+  <div class="accodion-panel">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Create User
+          </mat-panel-title>
+          <mat-panel-description>
+            Type your name and age etc.
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="expansion-panel">
+          <mat-form-field>
+            <input
+              matInput
+              name="first"
+              placeholder="First name"
+              [(ngModel)]="newUser.firstName"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              name="last"
+              placeholder="Last name"
+              [(ngModel)]="newUser.lastName"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              name="address"
+              placeholder="Address"
+              [(ngModel)]="newUser.address"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              name="age"
+              placeholder="Age"
+              [(ngModel)]="newUser.age"
+            />
+          </mat-form-field>
+          <button
+            mat-raised-button
+            color="primary"
+            style="float:right"
+            (click)="createCustomer()"
+          >
+            Create
+          </button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

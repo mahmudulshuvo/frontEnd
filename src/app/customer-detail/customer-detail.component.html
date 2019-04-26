@@ -1,0 +1,45 @@
+<div>
+  <form class="example-form">
+    <h2 class="mat-h2">Customer Details</h2>
+    <mat-form-field class="example-full-width">
+      <input
+        name="first"
+        matInput
+        placeholder="First Name"
+        [(ngModel)]="customerDetail.firstName"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        name="last"
+        placeholder="Last Name"
+        [(ngModel)]="customerDetail.lastName"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        name="address"
+        placeholder="Address"
+        [(ngModel)]="customerDetail.address"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        name="age"
+        placeholder="Age"
+        [(ngModel)]="customerDetail.age"
+      />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      style="float:right"
+      (click)="updateCustomer()"
+    >
+      Update
+    </button>
+  </form>
+</div>

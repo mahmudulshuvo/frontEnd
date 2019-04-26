@@ -1,0 +1,32 @@
+.example-icon {
+  padding: 0;
+}
+
+.example-spacer {
+  flex: 1;
+}
+
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.expansion-panel {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+}
+
+.customer-list {
+  width: 600px;
+  margin: 20px;
+}
+
+.accodion-panel {
+  width: 600px;
+  margin-left: 20px;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+}
